@@ -45,7 +45,7 @@ class SyntaxCheck {
             String allureReportDir = FileUtils.getLocalPath(pathToAllureReport.getParent())
 
             String vrunnerPath = VRunner.getVRunnerPath()
-            String command = "$vrunnerPath syntax-check --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"\""
+            String command = "$vrunnerPath syntax-check --ibconnection \"/F./build/ib\" --db-user \"Администратор\" "
 
             // Временно убрал передачу параметра.
             // См. https://github.com/vanessa-opensource/vanessa-runner/issues/361
