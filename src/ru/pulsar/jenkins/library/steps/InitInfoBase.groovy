@@ -49,7 +49,7 @@ class InitInfoBase implements Serializable {
                     executeParameter = '\\' + executeParameter
                 }
                 command += executeParameter
-                command += ' --ibconnection "/F./build/ib"'
+                command += ' --ibconnection "/F./build/ib" --db-user "Администратор" --db-pwd ""'
 
                 command += settingsIncrement
                 // Запуск миграции
