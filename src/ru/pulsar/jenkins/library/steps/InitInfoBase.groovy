@@ -66,12 +66,12 @@ class InitInfoBase implements Serializable {
                     files = files.sort new OrderBy( { it.name })
                     files.each {
                         Logger.println("Первичная инициализация файлом ${it.path}")
-                        VRunner.exec("$vrunnerPath vanessa --settings ${it.path} --ibconnection \"/F./build/ib\"")
+                        VRunner.exec("$vrunnerPath vanessa --settings ${it.path} --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"\"")
                     }
                 } else {
                     options.additionalInitializationSteps.each {
                         Logger.println("Первичная инициализация командой ${it}")
-                        VRunner.exec("$vrunnerPath ${it} --ibconnection \"/F./build/ib\"${settingsIncrement}")
+                        VRunner.exec("$vrunnerPath ${it} --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"\" ${settingsIncrement}")
                     }
                 }
             }

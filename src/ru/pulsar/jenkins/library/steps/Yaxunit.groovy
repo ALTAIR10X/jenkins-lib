@@ -42,7 +42,7 @@ class Yaxunit implements Serializable, Coverable {
         def env = steps.env()
 
         String vrunnerPath = VRunner.getVRunnerPath()
-        String ibConnection = ' --ibconnection "/F./build/ib"'
+        String ibConnection = ' --ibconnection "/F./build/ib" --db-user "Администратор" --db-pwd ""'
 
         // Готовим конфиг для yaxunit
         String yaxunitConfigPath = options.configPath
