@@ -55,7 +55,7 @@ class InitFromStorage implements Serializable {
         ]) {
             Logger.println("Выполнение загрузки конфигурации из хранилища")
             String vrunnerPath = VRunner.getVRunnerPath()
-            def command = "$vrunnerPath update-dev --storage $storageVersionParameter --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"\"" 
+            def command = "$vrunnerPath update-dev --storage $storageVersionParameter --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"123\"" 
 
             def options = config.initInfoBaseOptions
 

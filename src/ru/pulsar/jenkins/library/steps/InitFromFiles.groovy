@@ -42,7 +42,7 @@ class InitFromFiles implements Serializable {
 
         Logger.println("Выполнение загрузки конфигурации из файлов")
         String vrunnerPath = VRunner.getVRunnerPath()
-        def command = "$vrunnerPath update-dev --src $srcDir --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"\""
+        def command = "$vrunnerPath update-dev --src $srcDir --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"123\""
 
         def options = config.initInfoBaseOptions
 

@@ -49,7 +49,7 @@ class InitInfoBase implements Serializable {
                     executeParameter = '\\' + executeParameter
                 }
                 command += executeParameter
-                command += ' --ibconnection "/F./build/ib" --db-user "Администратор" --db-pwd ""'
+                command += ' --ibconnection "/F./build/ib" --db-user "Администратор" --db-pwd "123"'
 
                 command += settingsIncrement
                 // Запуск миграции
@@ -66,12 +66,12 @@ class InitInfoBase implements Serializable {
                     files = files.sort new OrderBy( { it.name })
                     files.each {
                         Logger.println("Первичная инициализация файлом ${it.path}")
-                        VRunner.exec("$vrunnerPath vanessa --settings ${it.path} --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"\"")
+                        VRunner.exec("$vrunnerPath vanessa --settings ${it.path} --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"123\"")
                     }
                 } else {
                     options.additionalInitializationSteps.each {
                         Logger.println("Первичная инициализация командой ${it}")
-                        VRunner.exec("$vrunnerPath ${it} --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"\" ${settingsIncrement}")
+                        VRunner.exec("$vrunnerPath ${it} --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"123\" ${settingsIncrement}")
                     }
                 }
             }

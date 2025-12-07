@@ -45,7 +45,7 @@ class Bdd implements Serializable, Coverable {
                     String vrunnerPath = VRunner.getVRunnerPath()
                     def bddStepExitCodeFile = "build/out/bdd-exit-code.log"
                     def command = "$vrunnerPath ${it}"
-                    command += " --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"\" "
+                    command += " --ibconnection \"/F./build/ib\" --db-user \"Администратор\" --db-pwd \"123\" "
                     VRunner.exec(command, true)
 
                     def bddStepExitCode = VRunner.readExitStatusFromFile(bddStepExitCodeFile, 0)
